@@ -21,7 +21,7 @@
 
 .menu__navegacao{
     display: flex;
-    gap: 5 rem;
+    gap: 80 px;
     
  }
 .cabecalho__menu__link{
@@ -110,3 +110,19 @@ body{
     }
     .apresentacao__conteudo{
     width: auto;}}
+
+    @keyframes slideIn {
+        0% {
+          transform: translateX(-100%); /* Começa fora da tela à esquerda */
+          opacity: 0; /* Começa invisível */
+        }
+        100% {
+          transform: translateX(0); /* Termina na posição original */
+          opacity: 1; /* Fica visível */
+        }
+      }
+      
+      h1, p {
+        animation: slideIn 1s ease-out;
+      }
+      
