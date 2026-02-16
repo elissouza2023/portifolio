@@ -6,8 +6,8 @@
     padding: 0%;
 }
 :root{
-    --cor-primaria: black;
-    --cor-secundaria: white;
+    --cor-primaria: #022E51;
+    --cor-secundaria: #A3B4C8;
     --cor-terciaria:rgb(176, 78, 247);
     --cor-houver:rgb(69, 69, 196);
     --cor-houver-botoes:rgb(196, 146, 231); 
@@ -125,4 +125,5 @@ body{
       h1, p {
         animation: slideIn 1s ease-out;
       }
+
       
