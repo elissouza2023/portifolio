@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +8,11 @@
 }
 
 :root {
-    /* Cores atualizadas conforme seu pedido */
-    --cor-primaria: #022e51;          /* Azul Marinho */
-    --cor-secundaria: #a3b4c8;        /* Cinza Azulado */
-    --cor-terciaria: #b74803;         /* Laranja */
-    
-    /* Tons de Hover (interação) */
-    --cor-hover: #1b5380;
-    --cor-hover-botoes: #e05b05; 
+    --cor-primaria: rgb(2, 46, 81);
+    --cor-secundaria: white;
+    --cor-terciaria: rgb(163, 180, 200);
+    --cor-houver: rgb(183, 72, 3);
+    --cor-houver-botoes: rgb(204, 109, 61);
 
     --fonte-primaria: 'Krona One', sans-serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
@@ -29,7 +26,7 @@ body {
 }
 
 .cabecalho {
-    padding: 2% 0% 0% 15%;
+    padding: 1% 0 0 15%;
 }
 
 .menu__navegacao {
@@ -47,12 +44,6 @@ body {
 .titulo-destaque {
     color: var(--cor-terciaria);
 }
-
-/* Corrigido de :houver para :hover */
-.titulo-destaque:hover {
-    color: var(--cor-hover);
-}
-
 .apresentacao {
     display: flex;
     align-items: center;
@@ -84,56 +75,36 @@ body {
 }
 
 .apresentacao__links__botoes {
-    background-color: var(--cor-terciaria);
+    background-color: var(--cor-houver);
     width: 280px;
     text-align: center;
     border-radius: 16px;
     font-size: 1.25rem;
     padding: 21.5px 25px;
     text-decoration: none;
-    color: white; /* Branco para melhor leitura sobre o laranja */
+    color: var(--cor-secundaria);
     font-family: var(--fonte-secundaria);
     font-weight: 600;
-    transition: 0.3s;
 }
 
 .apresentacao__links__botoes:hover {
-    background-color: var(--cor-hover-botoes); 
-    transform: scale(1.05); /* Um efeito visual mais suave que mudar o padding */
+    background-color: var(--cor-houver-botoes);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 .rodape {
     text-align: center;
     background-color: var(--cor-terciaria);
-    padding: 1.5%;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 1%;
+    color: var(--cor-primaria);  /* para contraste */
 }
 
 .apresentacao__imagem {
-    width: 50%; 
+    width: 50%;
 }
 
-/* Responsividade */
-@media (max-width: 1200px) {
-    .cabecalho {
-        padding: 5%;
-    }
-
-    .apresentacao {
-        flex-direction: column-reverse;
-        padding: 2% 5%;
-        margin: 2% 5%;
-    }
-
-    .apresentacao__conteudo {
-        width: auto;
-    }
-}
-
-/* Animações */
+/* Animação */
 @keyframes slideIn {
     0% {
         transform: translateX(-100%);
@@ -149,6 +120,28 @@ h1, p {
     animation: slideIn 1s ease-out;
 }
 
+/* Responsividade */
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
 
+    .menu__navegacao {
+        justify-content: center;
+    }
 
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 2% 5%;
+        margin: 4% 5%;
+    }
 
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .apresentacao__imagem {
+        width: 80%;
+        margin: 2rem auto;
+    }
+}
