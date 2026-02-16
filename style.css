@@ -30,7 +30,7 @@
     font-family: var(--fonte-primaria);
     font-size: 1,25rem;
 }
-body{
+.body{
     height: 100vh;
     box-sizing: border-box;
     background-color: var(--cor-primaria);
@@ -127,4 +127,5 @@ body{
       }
 
       
+
 
